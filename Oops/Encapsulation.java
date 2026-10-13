@@ -1,5 +1,4 @@
 
-
 public class Encapsulation {
     static class Bankname {
         private double balance;
@@ -22,7 +21,8 @@ public class Encapsulation {
     }
 
     static class student {
-        private int marks;
+
+        int marks;
 
         public void setmarks(int marks){
             if(marks>=0 && marks<= 70){
@@ -55,5 +55,4 @@ public class Encapsulation {
         System.out.println(s1.getmarks(45));
 
         }
-    }
-
+}
