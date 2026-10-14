@@ -1,3 +1,34 @@
 public class RunTimePolymorphism {
-    
+
+    static class Employee {
+
+        void work() {
+            System.out.println("Employee is working");
+        }
+    }
+
+    static class Developer extends Employee {
+
+        @Override
+        void work() {
+            System.out.println("Developer writes code");
+        }
+    }
+
+    static class Tester extends Employee {
+
+        @Override
+        void work() {
+            System.out.println("Tester tests applications");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Employee e1 = new Developer();
+        Employee e2 = new Tester();
+
+        e1.work();
+        e2.work();
+    }
 }
