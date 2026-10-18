@@ -2,20 +2,20 @@ abstract class Payments {
     abstract void pay(double amt);
 }
 
-public class Payment extends Payments {
+public class Paymenty extends Payments {
     @Override
     public void pay(double amt) {
         System.out.println("Paid " + amt + " using default payment");
     }
 
-    static class UPI extends Payment {
+    static class UPI extends Payments {
         @Override
         public void pay(double amt) {
             System.out.println("Paid " + amt + " using UPI");
         }
     }
 
-    static class Card extends Payment {
+    static class Card extends Payments {
         @Override
         public void pay(double amt) {
             System.out.println("Paid " + amt + " using Card");
@@ -23,8 +23,8 @@ public class Payment extends Payments {
     }
 
     public static void main(String[] args) {
-        Payment p1 = new UPI();
-        Payment p2 = new Card();
+        Payments p1 = new UPI();
+        Payments p2 = new Card();
         p2.pay(200);
         p1.pay(1000);
     }
